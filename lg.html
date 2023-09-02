@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+</head>
+<body>
+    <h2>Login</h2>
+    <form id="loginForm" action="#" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+        
+        <input type="button" value="Login" onclick="requestOTP()">
+    </form>
+
+    <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+
+    <div id="otpContainer" style="display: none;">
+        <h2>Enter OTP</h2>
+        <form id="otpForm" action="LoginServlet" method="post">
+            <label for="otp">OTP:</label>
+            <input type="text" id="otp" name="otp" required><br><br>
+            
+            <input type="submit" value="Verify OTP">
+        </form>
+    </div>
+
+    <script src="login.js"></script>
+
+    
+</body>
+</html>
+
